@@ -6,6 +6,7 @@ vendor/
 web/wp/
 
 web/app/plugins/*
+!web/app/plugins/advanced-custom-fields-pro
 web/app/uploads/*
 
 
