@@ -1,0 +1,44 @@
+{
+  "name": "LGSS IT Service Status",
+  "type": "project",
+  "license": "MIT",
+  "description": "",
+  "homepage": "http://www.lgss-digital.co.uk",
+  "authors": [
+    {
+      "name": "Dan Blundell",
+      "email": "dblundell@northamptonshire.gov.uk",
+      "homepage": "http://www.lgss-digital.co.uk"
+    }
+  ],
+  "keywords": [
+    "wordpress", "stack", "composer", "wp"
+  ],
+  "config": {
+    "preferred-install": "dist",
+    "secure-http": false
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "http://wpackagist.org"
+    }
+  ],
+  "require": {
+    "php": ">=5.4",
+    "composer/installers": "dev-master",
+    "vlucas/phpdotenv": "dev-master",
+    "johnpbloch/wordpress": "dev-master",
+    "wpackagist-plugin/akismet": "dev-master",
+    "wpackagist-plugin/amazon-web-services": "dev-master",
+    "wpackagist-plugin/amazon-s3-and-cloudfront": "dev-master",
+    "wpackagist-plugin/custom-post-type-ui": "dev-master"
+  },
+  "extra": {
+    "installer-paths": {
+      "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
+      "web/app/themes/{$name}/": ["type:wordpress-theme"]
+    },
+    "wordpress-install-dir": "web/wp"
+  }
+}
