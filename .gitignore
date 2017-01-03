@@ -63,6 +63,7 @@ Thumbs.db
 node_modules/
 
 # ignore theme dependency directories
+!app/themes/lgss-digital-theme/acf-json
 app/themes/lgss-digital-theme/node_modules/
 app/themes/lgss-digital-theme/bower_components
 app/themes/lgss-digital-theme/vendor
