@@ -1,0 +1,35 @@
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+	font-size: 16px;
+}
+
+.icon-status {
+	border-radius: 50%;
+	vertical-align: middle;
+	margin-right: 4%;
+	transform: translateY(-2px);
+
+}
+
+.icon-status--green {
+	background-color: #7fba00;
+	 &:extend(.icon-status);
+}
+
+.icon-status--amber {
+	background-color: #f68c1f;
+	&:extend(.icon-status);
+}
+
+.icon-status--red {
+	background-color: #e71e27;
+	&:extend(.icon-status);
+}
+
+.icon-status--information {
+	background-color: #0073b0;
+	&:extend(.icon-status);
+}
+
+.blog-title__image {
+    width: 33%;
+}

@@ -1,0 +1,302 @@
+.btn,
+.btn:visited {
+  display: inline;
+  border: none;
+  text-decoration: none;
+  position: relative;
+  line-height: (20 / 16);
+  padding: 12px 16px;
+  cursor: pointer;
+  background-image: none;
+  text-shadow: none;
+  box-shadow: none;
+}
+
+.btn-secondary,
+.btn,
+.btn:visited {
+  background-color: @lgssPrimary;
+  border-bottom: 2px solid #000A32;
+  color: #fff;
+  .border-radius(0px);
+  font-weight: 400;
+  overflow: visible;
+  .font-size(16px, 16px, 16px);
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn-secondary:focus,
+.btn-secondary:active,
+.btn-secondary-active,
+.btn:active,
+.btn:focus,
+.btn-active{
+  background-color: darken(@lgssPrimary, 10%);
+  outline: 3px solid @highlight;
+}
+
+.btn-secondary .btn:hover,
+.btn-secondary .btn-hover,
+.btn:hover,
+.btn-hover {
+  background-color: darken(@lgssPrimary, 10%);
+}
+
+.btn:active,
+.btn-active {
+  top: 0px;
+  box-shadow:none;
+}
+
+/* 
+ * making a click target which is bigger than the btn 
+ * (and fills the space made when the btn moves) 
+ */
+.btn:before {
+  content: "";
+  height: 110%;
+  width: 100%;
+  display: block;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.btn:active:before {
+  top: -10%;
+  height: 120%;
+}
+
+a.btn[rel="external"]:after {
+  display: none;
+  content: none;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+input{
+  &[disabled="disabled"] {
+    opacity: 0.5;
+  }
+
+  &[type="text"],
+  &[type="search"]{
+
+  }
+}
+
+#commentform {
+  input[type="submit"] {
+    margin-top: 10px;
+    @media (max-width: @mobileMaxWidth) {
+      width: 100%;
+    }
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="url"] {
+    @media (max-width: @mobileMaxWidth) {
+      width: 97%;
+    }
+    @media (max-width: @mobileSmallWidth) {
+      width: 96%;
+    }
+  }
+}
+
+.page-numbers-container {
+  border-top: @greyTopBorder;
+  margin-top: 0px;
+  padding-top: 35px;
+  overflow: hidden;
+
+  .lte-ie7 & {
+    a {
+      width: 200px;
+    }
+  }
+
+  @media (max-width: @mobileMaxWidth) {
+    padding-top: 25px;
+  }
+  
+  a:hover .link {
+    text-decoration: underline;
+  }
+  
+  .arrow {
+    padding: 0px 0px 25px 0px;
+    
+    span.contain {
+      display: inline-block;
+      padding-top: 9px;
+    }
+    
+    .arrow-button {
+      display: inline-block;
+      background: url('../assets/img/arrow-sprite.png') no-repeat;
+      width: 30px;
+      height: 50px;
+      margin: 0 5px 0 0;
+    }
+
+    .lte-ie7 & {
+      width: 200px;
+      cursor: pointer;
+
+      .link {
+        line-height: 1.2em;
+        width: 75%;
+      }
+    }
+  }
+  
+  .link {
+    display: block;
+    font-size: 18px;
+    font-size: 1.8rem;
+    width: 100%;
+
+    .lte-ie7 & {
+      width: 200px;
+    }
+
+  }
+
+  .next {
+    float: right;
+    
+    span.contain {
+      float: right;
+    }
+    
+    .link {
+      display: inline-block;
+      margin-right: 2%;
+      text-align: right;
+    }
+
+    .page-numbers {
+      text-align: right;
+    }
+    
+    .arrow-button {
+      width: 35px;
+      height: 45px;
+      display: inline-block;
+      float: right;
+      background: url('../assets/img/arrow-sprite.png') no-repeat top right;
+    }
+  }
+
+  .previous {
+    float: left;
+
+    span.contain {
+      float: left;
+    }
+    
+    .link {
+      display: inline-block;
+      margin-left: 2%;
+      text-align: left;
+    }
+    
+    .arrow-button {
+      width: 35px;
+      height: 45px;
+      display: inline-block;
+      background: url('../assets/img/arrow-sprite.png') no-repeat top left;
+      float: left;
+    }
+  }
+
+}
+
+.page-navigation {
+  .previous, .next {
+    width: 49%;
+
+    .lte-ie7 & {
+      width: 46%;
+    }
+
+    .link {
+      width: 86%;
+      .font-size(18px, 18px, 14px);
+
+      @media screen and (max-width: @tabletMaxWidth) {
+        width: 82%;
+      }
+      @media screen and (max-width: 500px) {
+        width: 80%;
+      }
+      @media screen and (max-width: 440px) {
+        width: 78%;
+      }
+      @media screen and (max-width: 395px) {
+        width: 76%;
+      }
+      @media screen and (max-width: 365px) {
+        width: 74%;
+      }
+      @media screen and (max-width: 340px) {
+        width: 72%;
+      }
+    }
+  }
+  .previous {
+    float: left;
+    margin-right: 2%;
+  }
+  .next {
+    float: right;
+
+    .lte-ie7 & {
+      .arrow-button {
+        position: absolute;
+      }
+    }
+  }
+}
+
+.pagination {
+  margin: 10px auto 0 auto;
+  text-align: center;
+
+  .lte-ie7 & {
+    float: right;
+  }
+
+  ul {
+    margin: 0 10px;
+    box-shadow: none;
+    li {
+      padding-left: 0;      
+      .font-size(18px, 18px, 16px);
+      a {
+        float: none;
+        &:hover {
+          text-decoration: underline;
+          background: transparent;
+        }
+      }
+      a, span {
+        border: none;
+      }
+    }
+    .active {
+      border: none;
+      a {
+        &:hover {
+          text-decoration: none;
+        }
+      }
+      a, span {
+        background: transparent;
+      }
+    }
+  }
+}
+

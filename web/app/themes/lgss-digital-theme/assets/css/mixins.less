@@ -1,0 +1,66 @@
+// Mixins
+
+@mobileSmallWidth:  370px;
+@mobileMaxWidth:    767px;
+@tabletMinWidth:    768px;
+@tabletMaxWidth:    979px;
+
+@greyTopBorder: 1px solid #bfc1c3;
+
+// "Desktop"
+// No media-query
+// "Tablet"
+// @media (min-width: 768px) and (max-width: 979px) {
+// }
+// "Mobile"
+// @media (max-width: 767px) {
+// }
+
+.font-size (@d, @t, @m) {
+  font-size: @d;
+
+  @media (min-width: @tabletMinWidth) and (max-width: @tabletMaxWidth) {
+    font-size: @t;
+  }
+  @media (max-width: @mobileMaxWidth) {
+    font-size: @m;
+  }
+}
+
+.line-height (@d, @t, @m) {
+  line-height: @d;
+
+  @media (min-width: @tabletMinWidth) and (max-width: @tabletMaxWidth) {
+    line-height: @t;
+  }
+  @media (max-width: @mobileMaxWidth) {
+    line-height: @m;
+  }
+}
+
+.menu-follow-us (@h) {
+  background-image: url(../assets/img/follow-sprite.png);
+  background-repeat: no-repeat;
+  background-position: left (@h * -25px);
+}
+
+.border-radius (@radius) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius:    @radius;
+  border-radius:         @radius;
+}
+
+// Icon font
+.icomoon(@content) {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  content: @content;
+  display: inline-block;
+  margin-right: 5px;
+  text-decoration: none;
+}
