@@ -6,8 +6,8 @@ This is the theme in use for the blogs hosted at blog.gov.uk, tweaked by LGSS fo
 
 Requirements:
 
-* node and npm
-* grunt-cli and bower (npm install -g grunt-cli bower)
+* [node](https://nodejs.org/en/) (includes [npm](https://www.npmjs.com/))
+* grunt-cli and bower (`npm install -g grunt-cli bower`)
 * [composer](https://getcomposer.org/)
 * Run this in the theme: npm install
 
