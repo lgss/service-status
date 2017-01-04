@@ -2,7 +2,18 @@
 
 This site runs on WordPress but uses Composer to bring in WordPress and an plugins as packages, so's not to make the repo untidy.
 
-Uploads are included for now
+Uploads are included for now but these will be removed in the future and moved elsewhere.
+
+### Requirements
+
+To get the site running you will need
+
+* PHP >= 5.5
+* [composer](https://getcomposer.org/)
+* MySQL
+* Apache 2.4 (or similar another webserver)
+
+There are additional requirements for [Theme Development](web/app/themes/lgss-digital-theme/README.md)
 
 ### Getting started
 
@@ -19,3 +30,9 @@ If your local copy attempts to redirect to another address, check that the wp_op
 ### Theme Development
 
 For theme development see the theme [README](web/app/themes/lgss-digital-theme/README.md) file.
+
+## Help and bug reports
+
+If you get stuck with something we might be able to help (but can't guarantee it). We're always happy to receive bug reports (or, even better, pull requests).
+
+If you'd like to get in touch about anything to do with this theme, please use the issue tracker on GitHub: https://github.com/lgss/service-status/issues
