@@ -27,8 +27,8 @@ This theme was based on [govuk_template](https://github.com/alphagov/govuk_templ
 
 Plugins are included using composer, this helps us bring in the latest versions and manage updates through version control. Most plugins are available through [WPackagist](https://wpackagist.org/)
 
-* To update existing plugins run `composer update`
-* To add a new plugin to the site, edit the composer.json file and run `composer update`
+* To update existing plugins cd to the project root and run `composer update`
+* To add a new plugin to the site, edit the composer.json file and run `composer update` in the project root
 
 If a plugin isn't available through [WPackagist](https://wpackagist.org/) you should include it directly in the /web/app/plugins/ directory and commit it to version control.
 
