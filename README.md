@@ -10,10 +10,12 @@ Uploads are included for now
 1. cd to the repo directory and run `composer install` (this will download WordPress and any required plugins)
 1. Create a `.env` file using `.env.example` as a template and fill in the blanks
 1. Get a copy of the database and connect it up
-1. Point your local web server at the web/ path as the webroot
+1. Point your local web server to the 'web' folder, use that as the website root
 1. Visit your chosen local url in the browser
-1. Done.
+1. Done
 
-### Development
+If your local copy attempts to redirect to another address, check that the wp_options table in the database and your .env file contain the correct settings for URL and WordPress URL
 
-TODO
+### Theme Development
+
+For theme development see the theme [README](web/app/themes/lgss-digital-theme/readme.md) file.
