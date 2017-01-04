@@ -18,4 +18,4 @@ If your local copy attempts to redirect to another address, check that the wp_op
 
 ### Theme Development
 
-For theme development see the theme [README](web/app/themes/lgss-digital-theme/readme.md) file.
+For theme development see the theme [README](web/app/themes/lgss-digital-theme/README.md) file.
